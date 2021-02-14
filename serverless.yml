@@ -1,0 +1,4 @@
+# serverless.yml
+
+resume:
+  component: "@sls-next/serverless-component@latest"
