@@ -1,9 +1,22 @@
 publications:
+  - reference: "Paper with Peds Dept"
+  - reference: "Paper with Taylor"
+  - reference: "Paper with Justin"
   - reference: "Clarke, Jacob A., Alyssa M. Despotis, Ricardo J. Ramirez, Jose P. Zevallos, and Angela L. Mazul. “Head and Neck Cancer Survival Disparities by Race and Rural–Urban Context.” Cancer Epidemiology and Prevention Biomarkers 29, no. 10 (October 1, 2020): 1955–61. https://doi.org/10.1158/1055-9965.EPI-20-0376."
   - reference: "Jacob Clarke, Angela Mazul. Rural Black Cases Have Worsened Outcomes in Head and Neck Cancer. Poster Presented at: AACR The Science of Cancer Disparities. 2019 Sep 20; San Francisco, CA"
   - reference: "Joshua J. Nelson, Seth R. Stapley, Chris S. Finuf, Elizabeth Anderson, Jacob Clarke, Jordan T. Yorgason, Scott C. Steffensen. Effects of Cocaine on Spontaneous Dopamine Release Varies across Striatal Regions Poster Presented at: Mary-Lou Fulton Conference. 2018 Apr 12; Provo, UT."
 
 experiences:
+  - location: SLU West Pavilion
+    title: Student Volunteer Pianist
+    takeaways:
+      - Played piano for patients receiving ambulatory chemotherapy
+  - location: SLU HRC
+    title: Lead Website Dev
+    timeline: Oct 2020 - Present
+  - location: SLU Ill Scripts
+    title: Lead Developer
+    timeline: Oct 2020 - Present
   - location: Washington University Head and Neck Cancer Lab
     title: Lab Technician
     timeline: Oct 2018 - Sept 2019
