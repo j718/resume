@@ -31,15 +31,24 @@ export default function Intro() {
       <Grid item xs={12} md={3}>
         <Avatar className={classes.avatar} src="/headshot.jpg" />
       </Grid>
-      <Grid
-        component={motion.div}
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        item
-        md={9}
-      >
-        <Typography variant="h2">{name}</Typography>
-        <Typography variant="body1">{intro}</Typography>
+      <Grid item md={9}>
+        <Typography
+          variant="h2"
+          component={motion.div}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          {name}
+        </Typography>
+        <Typography
+          variant="body1"
+          component={motion.div}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 2 }}
+        >
+          {intro}
+        </Typography>
       </Grid>
     </Grid>
   );
