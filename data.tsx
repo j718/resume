@@ -1,3 +1,11 @@
+export const name: string = "Jacob Clarke";
+export const intro: string =
+  "Over the last few years, I have worked in several fields related to \
+music, medicine, and cycling. I am currently studying at St. Louis \
+University School of Medicine as a prospective MD candidate and spend \
+my free time exploring St. Louis bike trails and city parks with my \
+wife Amanda.";
+
 export type PublicationProps = {
   reference: string;
   href?: string;
