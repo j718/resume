@@ -112,6 +112,7 @@ export const education: Array<EducationProps> = [
     institution: "St. Louis University School of Medicine",
     degree: "MD Candidate",
     timeline: "Aug 2018- Present",
+    achievements: ["USMLE Step 1: 243"],
   },
   {
     institution: "Brigham Young University",
