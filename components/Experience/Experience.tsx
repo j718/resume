@@ -7,8 +7,9 @@ export interface ExperienceProps {
   title: string;
   subtitle: string;
   timeline: string;
-  achievements: Array<string>;
+  achievements?: Array<string>;
   description?: string;
+  key: any
 }
 
 export const Experience = (props: ExperienceProps) => {
@@ -24,7 +25,7 @@ export const Experience = (props: ExperienceProps) => {
   }, [controls, inView]);
 
   return (
-    <div>
+    <div key={props.key}>
       <Typography
         ref={ref}
         variant="h5"

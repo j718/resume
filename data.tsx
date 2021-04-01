@@ -10,6 +10,11 @@ export type PublicationProps = {
   reference: string;
   href?: string;
 };
+
+function d(str) {
+  return ("" + str).replace(/(\n)\s+/g, "$1");
+}
+
 export const publications: Array<PublicationProps> = [
   // { reference: "Paper with Peds Department" },
   // { reference: "Paper with Taylor" },
@@ -34,78 +39,103 @@ export const publications: Array<PublicationProps> = [
   },
 ];
 
+enum ExperienceTypes {
+  RESEARCH = "Research Experience",
+  VOLUNTEER = "Volunteer Experience",
+  WORK = "Work Experience",
+}
+
 export type ExperienceProps = {
+  type: ExperienceTypes;
   location: string;
-  title: string;
-  takeaways?: Array<string>;
-  timeline?: string;
-  description?: string;
+  position: string;
+  dates: string;
+  supervisor?: string;
+  weeklyHours?: number;
+  description: string;
+  reasonLeaving?: string;
 };
 
 export const experiences: Array<ExperienceProps> = [
   {
-    location: "SLU West Pavilion",
-    title: "Student Volunteer Pianist",
-    takeaways: ["Played piano for patients receiving ambulatory chemotherapy"],
+    location: "SLU West Pavilion Cancer Center",
+    type: ExperienceTypes.VOLUNTEER,
+    position: "Volunteer Pianist",
+    reasonLeaving: "I transitioned to spend more time working in my lab.",
+    weeklyHours: 1,
+    description: `I played piano outside of patient rooms while they were receiving chemotherapy.
+      Total Time: 16 hours`,
+    dates: "February 2019 - May 2019",
   },
   {
     location: "SLU HRC",
-    title: "Lead Website Dev",
-    timeline: "Oct 2020 - Present",
+    position: "Lead Website Developer",
+    dates: "Oct 2020 - Present",
+    weeklyHours: 8,
+    description: "Redesigned website",
+    type: ExperienceTypes.VOLUNTEER,
+    reasonLeaving: "N/A",
   },
   {
     location: "SLU Ill Scripts",
-    title: "Lead Developer",
-    timeline: "Oct 2020 - Present",
+    position: "Lead Developer",
+    dates: "Oct 2020 - Present",
+    type: ExperienceTypes.VOLUNTEER,
+    description: `Created a study tool using anki for intervention to help students learn`,
+    reasonLeaving: "N/A",
+    supervisor: "Dr. Nora Porter, MD",
+    weeklyHours: 1
   },
   {
     location: "Washington University Head and Neck Cancer Lab",
-    title: "Lab Technician",
-    timeline: "Oct 2018 - Sept 2019",
-    description: "Research lab led by Dr. Jose P. Zevallos",
-    takeaways: [
-      ,
-      " Focused on identifying the differences in mRNA and protein expression between HPV(+) smokers and HPV(+) non smokers.",
-      " Mastered the techniques of western blotting, qPCR, RT-PCR, and cell culturing.",
-      " Performed Kaplan Meier and Cox proportional hazard regression analyses to describe health disparities.",
-    ],
+    position: "Lab Technician",
+    dates: "Oct 2018 - May 2019",
+    description:  `Focused on identifying the differences in mRNA and protein expression between HPV(+) smokers and HPV(+) non smokers.
+    Mastered the techniques of western blotting, qPCR, RT-PCR, and cell culturing.
+    Performed Kaplan Meier and Cox proportional hazard regression analyses to describe health disparities.`,
+    type: ExperienceTypes.RESEARCH
+  },
+  {
+    location: "Washington University Head and Neck Cancer Lab",
+    position: "Lab Technician",
+    dates: "June 2019 - March 2020",
+    description: "todo",
+    type: ExperienceTypes.RESEARCH
   },
   {
     location: "Brigham Young Steffensen Lab",
-    title: "Lab Technician",
-    timeline: "Aug 2017 - Apr 2018",
-    description: "Research lab led by Dr. Scott Steffensen",
-    takeaways: [
-      ,
-      " Researched and troubleshot a new protocol for isolation of microglia from the mouse brain.",
-      " Trained other students in intracranial injections of virus in rats and mice. Performed imaging on mice to check the response of dopamine neuron firing rates to alcohol incubation dose.",
-      " Performed transcardial perfusions on rats and mice.",
-    ],
+    position: "Lab Technician",
+    dates: "Aug 2017 - Apr 2018",
+    description: `Researched and troubleshot a new protocol for isolation of microglia from the mouse brain.
+      Trained other students in intracranial injections of virus in rats and mice. Performed imaging on mice to check the response of dopamine neuron firing rates to alcohol incubation dose.
+      Performed transcardial perfusions on rats and mice.`,
+    type: ExperienceTypes.RESEARCH,
+    reasonLeaving: "I graduated and moved out of the state.",
+    supervisor: "Dr. Scott Steffensen",
+    weeklyHours: 10
   },
   {
     location: "BYU Ballet Department",
-    title: "Ballet Accompanist",
-    timeline: "Dec 2018 - Jun 2018",
-    takeaways: [
-      ,
-      " Developed a repertoire of over 30 songs within a two-week period.",
-      " Mastered accompaniment for several dance techniques including slow tendu, quick tendu, ronde de jambe, grand battement, fondu, pirouette, grand pirouette, and little jumps.",
-    ],
+    position: "Ballet Accompanist",
+    dates: "Dec 2018 - Jun 2018",
+    description: `Developed a repertoire of over 30 songs within a two-week period.
+      Mastered accompaniment for several dance techniques including slow tendu, quick tendu, ronde de jambe, grand battement, fondu, pirouette, grand pirouette, and little jumps.`,
+    type: ExperienceTypes.WORK,
+    reasonLeaving: "I graduated and moved out of the state",
+    weeklyHours: 10
   },
   {
     location: "Provo Bicycle Collective",
-    title: "Mechanic Certification Instructor",
-    timeline: "Dec 2017 - Jun 2018",
-    description: "Non-profit bicycle shop",
-    takeaways: [
-      ,
-      " Taught mechanic certification courses at the Slate Canyon Youth Juvenile Detention Center to help students have a better chance at finding work after release.",
-      ,
-      " Repaired donated bikes to give them to the homeless in our community.",
-      ,
-      " Led multiple volunteer nights of over 15 volunteers, teaching them to repair donated bikes.",
-    ],
-  },
+    position: "Mechanic Certification Instructor",
+    dates: "Dec 2017 - Jun 2018",
+    weeklyHours: 10,
+    description: `Taught mechanic certification courses at the Slate Canyon Youth Juvenile Detention Center to help students have a better chance at finding work after release.
+      Repaired donated bikes to give them to the homeless in our community.
+      Led multiple volunteer nights of over 15 volunteers, teaching them to repair donated bikes.`,
+    type: ExperienceTypes.WORK,
+    reasonLeaving: "I graduated and moved out of the state",
+    supervisor: "Kira Johnson"
+  }
 ];
 
 export type EducationProps = {

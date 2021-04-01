@@ -5,13 +5,12 @@ import { Typography } from "@material-ui/core";
 export const Publications = () => (
   <>
     <Typography variant="h4">Experiences</Typography>
-    {experiences.map((experience) => (
+    {experiences.map((experience, index) => (
       <Experience
-        key={experience.location}
-        title={experience.title}
+        key={index}
+        title={experience.position}
         subtitle={experience.location}
-        achievements={experience.takeaways}
-        timeline={experience.timeline}
+        timeline={experience.dates}
         description={experience.description}
       />
     ))}
