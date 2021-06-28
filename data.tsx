@@ -1,10 +1,9 @@
 export const name: string = "Jacob Clarke";
-export const intro: string =
-  "Over the last few years, I have worked in several fields related to \
-music, medicine, and cycling. I am currently studying at St. Louis \
-University School of Medicine as a prospective MD candidate and spend \
-my free time exploring St. Louis bike trails and city parks with my \
-wife Amanda.";
+export const intro: string = `Over the last few years, I have worked in several fields related to
+music, medicine, and cycling. I am currently studying at St. Louis
+University School of Medicine as a prospective MD candidate and spend
+my free time exploring St. Louis bike trails and city parks with my
+wife Amanda.`;
 
 export type PublicationProps = {
   reference: string;
@@ -28,8 +27,7 @@ export const publications: Array<PublicationProps> = [
       "Clarke, Jacob A., Alyssa M. Despotis, Ricardo J. Ramirez, Jose P. Zevallos, and Angela L. Mazul. “Head and Neck Cancer Survival Disparities by Race and Rural–Urban Context.” Cancer Epidemiology and Prevention Biomarkers 29, no. 10 (October 1, 2020): 1955–61. https://doi.org/10.1158/1055-9965.EPI-20-0376.",
   },
   {
-    href:
-      "https://cebp-aacrjournals-org.ezp.slu.edu/content/29/6_Supplement_2/B099",
+    href: "https://cebp-aacrjournals-org.ezp.slu.edu/content/29/6_Supplement_2/B099",
     reference:
       "Jacob Clarke, Angela Mazul. Rural Black Cases Have Worsened Outcomes in Head and Neck Cancer. Poster Presented at: AACR The Science of Cancer Disparities. 2019 Sep 20; San Francisco, CA",
   },
@@ -47,18 +45,59 @@ enum ExperienceTypes {
 
 export type ExperienceProps = {
   type: ExperienceTypes;
-  location: string;
+  organization: string;
   position: string;
   dates: string;
   supervisor?: string;
+  link?: string;
   weeklyHours?: number;
   description: string;
   reasonLeaving?: string;
 };
 
+export const highlights = [
+  "Jacob is invested in medical education. IllScripts",
+  ""
+]
+
 export const experiences: Array<ExperienceProps> = [
   {
-    location: "SLU West Pavilion Cancer Center",
+    organization: "Americorps",
+    position: "Vaccination Clinic Volunteer",
+    description: `I wanted to find a way to help with the St. Louis response to the COVID vaccine. Consequently, I volunteered twice at this community vaccination clinic. At the clinic, I reviewed past medical history and side effects with patients before receiving their vaccines.
+    Total time: 10 hours.`,
+    dates: "April 2021 - April 2021",
+    type: ExperienceTypes.VOLUNTEER,
+  },
+  {
+    organization: "St. Louis University School of Medicine",
+    dates: "May 2021 - Present",
+    position: "Student Researcher",
+    supervisor: "Timothy Wiemken, PhD",
+    description: `The Vaccine Adverse Events Reporting System (VAERS) is often difficult to use for research because its coding is done by non-medical personal. Consequently, many of the recorded symptoms are not relevant to vaccine adverse events. I recoded over 8000 symptoms from within VAERS database to more clinically relevant terms.I am now creating an online portal that researchers can use to query the newly recoded VAERS data. My work will make the data more relevant and easily accessible for research questions.
+     `,
+    type: ExperienceTypes.RESEARCH,
+  },
+  {
+    organization: "The Church of Jesus Christ of Latter-day Saints",
+    type: ExperienceTypes.VOLUNTEER,
+    position: "Children's Choir Leader",
+    weeklyHours: 3,
+    description: `Music is an important part of my life. I led a children's choir of 30. Prior to COVID, we met weekly. During COVID, I created weekly online videos to help the children learn songs and taught several other weeks over zoom. We eventually held an entirely virtually recorded musical program during 2020.`,
+    dates: "June 2019 - Present",
+  },
+  {
+    organization: "The Church of Jesus Christ of Latter-day Saints",
+    type: ExperienceTypes.VOLUNTEER,
+    position: "Service Mission",
+    supervisor: "Christian Fingerle, PhD",
+    weeklyHours: 60,
+    description:
+      "I served a two-year mission for my church in north-eastern Germany. While there, I learned advanced German, taught free English and German classes to refugees, participated in several service activities, and taught people about my faith.",
+    dates: "January 2014 - December 2015",
+  },
+  {
+    organization: "SLU West Pavilion Cancer Center",
     type: ExperienceTypes.VOLUNTEER,
     position: "Volunteer Pianist",
     reasonLeaving: "I transitioned to spend more time working in my lab.",
@@ -68,42 +107,47 @@ export const experiences: Array<ExperienceProps> = [
     dates: "February 2019 - May 2019",
   },
   {
-    location: "SLU HRC",
-    position: "Lead Website Developer",
+    organization: "SignupClinic",
+    position: "Lead Web Developer",
     dates: "Oct 2020 - Present",
     weeklyHours: 8,
-    description: "Redesigned website",
+    link: "https://slumed.signupclinic.com",
+    description: `The program used by our school's volunteer clinic was poorly designed. Additionally, much of the information pertaining to our weekly clinics was spread across several google drive files. Using my background in computer programming, I volunteered to design a volunteer portal to manage all volunteer records and clinic signups. I am now working to bring my work to other school-led volunteer clinics. During this process, I learned to apply my passion for computer programming to applications that could be used in the clinic.
+    `,
     type: ExperienceTypes.VOLUNTEER,
     reasonLeaving: "N/A",
   },
   {
-    location: "SLU Ill Scripts",
-    position: "Lead Developer",
+    organization: "SLU Ill Scripts",
+    position: "Lead Web Developer",
     dates: "Oct 2020 - Present",
     type: ExperienceTypes.VOLUNTEER,
-    description: `Created a study tool using anki for intervention to help students learn`,
+    description: `I created a study tool using anki for intervention to help students learn`,
     reasonLeaving: "N/A",
-    supervisor: "Dr. Nora Porter, MD",
-    weeklyHours: 1
+    link: "https://illscripts.com",
+    supervisor: "Nora Porter, MD",
+    weeklyHours: 1,
   },
   {
-    location: "Washington University Head and Neck Cancer Lab",
+    organization: "Washington University School of Medicine",
     position: "Lab Technician",
     dates: "Oct 2018 - May 2019",
-    description:  `Focused on identifying the differences in mRNA and protein expression between HPV(+) smokers and HPV(+) non smokers.
-    Mastered the techniques of western blotting, qPCR, RT-PCR, and cell culturing.
+    supervisor: "Jose Zevallos, MD, MPH, FACS",
+    description: `I focused on identifying the differences in mRNA and protein expression between HPV(+) smokers and HPV(+) non smokers.
+    I mastered the techniques of western blotting, qPCR, RT-PCR, and cell culturing.
     Performed Kaplan Meier and Cox proportional hazard regression analyses to describe health disparities.`,
-    type: ExperienceTypes.RESEARCH
+    type: ExperienceTypes.RESEARCH,
   },
   {
-    location: "Washington University Head and Neck Cancer Lab",
-    position: "Lab Technician",
+    organization: "Washington University School of Medicine",
+    position: "Student Researcher",
     dates: "June 2019 - March 2020",
     description: "todo",
-    type: ExperienceTypes.RESEARCH
+    supervisor: "Angela Mazul, PhD",
+    type: ExperienceTypes.RESEARCH,
   },
   {
-    location: "Brigham Young Steffensen Lab",
+    organization: "Brigham Young Steffensen Lab",
     position: "Lab Technician",
     dates: "Aug 2017 - Apr 2018",
     description: `Researched and troubleshot a new protocol for isolation of microglia from the mouse brain.
@@ -111,21 +155,22 @@ export const experiences: Array<ExperienceProps> = [
       Performed transcardial perfusions on rats and mice.`,
     type: ExperienceTypes.RESEARCH,
     reasonLeaving: "I graduated and moved out of the state.",
-    supervisor: "Dr. Scott Steffensen",
-    weeklyHours: 10
+    supervisor: "Scott Steffensen, PhD",
+    weeklyHours: 10,
   },
   {
-    location: "BYU Ballet Department",
+    organization: "BYU Ballet Department",
     position: "Ballet Accompanist",
     dates: "Dec 2018 - Jun 2018",
+    supervisor: "Daniel Fifield",
     description: `Developed a repertoire of over 30 songs within a two-week period.
       Mastered accompaniment for several dance techniques including slow tendu, quick tendu, ronde de jambe, grand battement, fondu, pirouette, grand pirouette, and little jumps.`,
     type: ExperienceTypes.WORK,
     reasonLeaving: "I graduated and moved out of the state",
-    weeklyHours: 10
+    weeklyHours: 10,
   },
   {
-    location: "Provo Bicycle Collective",
+    organization: "Provo Bicycle Collective",
     position: "Mechanic Certification Instructor",
     dates: "Dec 2017 - Jun 2018",
     weeklyHours: 10,
@@ -134,8 +179,8 @@ export const experiences: Array<ExperienceProps> = [
       Led multiple volunteer nights of over 15 volunteers, teaching them to repair donated bikes.`,
     type: ExperienceTypes.WORK,
     reasonLeaving: "I graduated and moved out of the state",
-    supervisor: "Kira Johnson"
-  }
+    supervisor: "Kira Johnson",
+  },
 ];
 
 export type EducationProps = {

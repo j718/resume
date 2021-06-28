@@ -1,4 +1,4 @@
-import { Typography, Grid } from "@material-ui/core";
+import { Typography, Grid, Link } from "@material-ui/core";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
@@ -7,9 +7,10 @@ export interface ExperienceProps {
   title: string;
   subtitle: string;
   timeline: string;
+  link?: string;
   achievements?: Array<string>;
   description?: string;
-  key: any
+  key: any;
 }
 
 export const Experience = (props: ExperienceProps) => {
@@ -23,6 +24,9 @@ export const Experience = (props: ExperienceProps) => {
       controls.start("hidden");
     }
   }, [controls, inView]);
+  const Subtitle = () => (
+    <Typography variant="subtitle1">{props.subtitle}</Typography>
+  );
 
   return (
     <div key={props.key}>
@@ -42,7 +46,13 @@ export const Experience = (props: ExperienceProps) => {
       </Typography>
       <Grid container justify="space-between">
         <Grid item>
-          <Typography variant="subtitle1">{props.subtitle}</Typography>
+          {props.link ? (
+            <Link target="_blank" href={props.link} underline="always">
+              <Subtitle />
+            </Link>
+          ) : (
+            <Subtitle />
+          )}
         </Grid>
         <Grid item>
           <Typography variant="body2">{props.timeline}</Typography>

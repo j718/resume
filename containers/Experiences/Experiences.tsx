@@ -9,9 +9,10 @@ export const Publications = () => (
       <Experience
         key={index}
         title={experience.position}
-        subtitle={experience.location}
+        subtitle={experience.organization}
         timeline={experience.dates}
         description={experience.description}
+        link={experience.link}
       />
     ))}
   </>
