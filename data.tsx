@@ -61,14 +61,7 @@ export const highlights = [
 ]
 
 export const experiences: Array<ExperienceProps> = [
-  {
-    organization: "Americorps",
-    position: "Vaccination Clinic Volunteer",
-    description: `I wanted to find a way to help with the St. Louis response to the COVID vaccine. Consequently, I volunteered twice at this community vaccination clinic. At the clinic, I reviewed past medical history and side effects with patients before receiving their vaccines.
-    Total time: 10 hours.`,
-    dates: "April 2021 - April 2021",
-    type: ExperienceTypes.VOLUNTEER,
-  },
+  
   {
     organization: "St. Louis University School of Medicine",
     dates: "May 2021 - Present",
@@ -87,14 +80,15 @@ export const experiences: Array<ExperienceProps> = [
     dates: "June 2019 - Present",
   },
   {
-    organization: "The Church of Jesus Christ of Latter-day Saints",
+    organization: "SLU Ill Scripts",
+    position: "Lead Web Developer",
+    dates: "Oct 2020 - Present",
     type: ExperienceTypes.VOLUNTEER,
-    position: "Service Mission",
-    supervisor: "Christian Fingerle, PhD",
-    weeklyHours: 60,
-    description:
-      "I served a two-year mission for my church in north-eastern Germany. While there, I learned advanced German, taught free English and German classes to refugees, participated in several service activities, and taught people about my faith.",
-    dates: "January 2014 - December 2015",
+    description: `I created a study tool using anki for intervention to help students learn`,
+    reasonLeaving: "N/A",
+    link: "https://illscripts.com",
+    supervisor: "Nora Porter, MD",
+    weeklyHours: 1,
   },
   {
     organization: "SLU West Pavilion Cancer Center",
@@ -107,6 +101,32 @@ export const experiences: Array<ExperienceProps> = [
     dates: "February 2019 - May 2019",
   },
   {
+    organization: "Americorps",
+    position: "Vaccination Clinic Volunteer",
+    description: `I wanted to find a way to help with the St. Louis response to the COVID vaccine. Consequently, I volunteered twice at this community vaccination clinic. At the clinic, I reviewed past medical history and side effects with patients before receiving their vaccines.
+    Total time: 10 hours.`,
+    dates: "April 2021 - April 2021",
+    type: ExperienceTypes.VOLUNTEER,
+  },
+  {
+    organization: "The Church of Jesus Christ of Latter-day Saints",
+    type: ExperienceTypes.VOLUNTEER,
+    position: "Service Mission",
+    supervisor: "Christian Fingerle, PhD",
+    weeklyHours: 60,
+    description:
+      "I served a two-year mission for my church in north-eastern Germany. While there, I learned advanced German, taught free English and German classes to refugees, participated in several service activities, and taught people about my faith.",
+    dates: "January 2014 - December 2015",
+  },
+  {
+    organization: "Washington University School of Medicine",
+    position: "Student Researcher",
+    dates: "June 2019 - March 2020",
+    description: "I published my work on racial and geographic cancer survival disparities in the AACR’s Cancer Epidemiology, Biomarkers & Prevention; I performed every statistical analysis found in the paper.",
+    supervisor: "Angela Mazul, PhD",
+    type: ExperienceTypes.RESEARCH,
+  },
+  {
     organization: "SignupClinic",
     position: "Lead Web Developer",
     dates: "Oct 2020 - Present",
@@ -117,17 +137,7 @@ export const experiences: Array<ExperienceProps> = [
     type: ExperienceTypes.VOLUNTEER,
     reasonLeaving: "N/A",
   },
-  {
-    organization: "SLU Ill Scripts",
-    position: "Lead Web Developer",
-    dates: "Oct 2020 - Present",
-    type: ExperienceTypes.VOLUNTEER,
-    description: `I created a study tool using anki for intervention to help students learn`,
-    reasonLeaving: "N/A",
-    link: "https://illscripts.com",
-    supervisor: "Nora Porter, MD",
-    weeklyHours: 1,
-  },
+  
   {
     organization: "Washington University School of Medicine",
     position: "Lab Technician",
@@ -138,14 +148,7 @@ export const experiences: Array<ExperienceProps> = [
     Performed Kaplan Meier and Cox proportional hazard regression analyses to describe health disparities.`,
     type: ExperienceTypes.RESEARCH,
   },
-  {
-    organization: "Washington University School of Medicine",
-    position: "Student Researcher",
-    dates: "June 2019 - March 2020",
-    description: "todo",
-    supervisor: "Angela Mazul, PhD",
-    type: ExperienceTypes.RESEARCH,
-  },
+  
   {
     organization: "Brigham Young Steffensen Lab",
     position: "Lab Technician",
